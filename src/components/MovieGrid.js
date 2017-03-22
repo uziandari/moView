@@ -28,14 +28,14 @@ export default class MovieGrid extends Component {
       });
     } else {
       return (
-        <div>Nothing Found</div>
+        <div></div>
       );
     } 
 
     return (
-      <div className="movies-container">
+      <section className="results-container">
         {moviesNode.length === 0 ? null : moviesNode}
-      </div>
+      </section>
     );
   }
 

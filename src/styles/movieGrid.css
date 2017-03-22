@@ -1,4 +1,4 @@
-.movies-container {
+.results-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -9,7 +9,8 @@
       -ms-flex-direction: row;
           flex-direction: row;
   overflow: hidden;
-  margin: 60px 5px 5px 5px;
+  justify-content: center;
+  margin: 0;
 }
 
 .movie-card {
@@ -20,9 +21,9 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: left;
-      -ms-flex-align: left;
-          align-items: left;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 15px;
   width: 240px;
   background: #fff;

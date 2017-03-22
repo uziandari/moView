@@ -11,9 +11,9 @@ export default class SearchBar extends Component {
 
   render() {
     return (
-      <div className="search-container">
+      <section className="search-container">
         <input className="search-input" placeholder="Search for a movie..." onChange={event => this.onInputChange(event.target.value)} />
-      </div>
+      </section>
     )
   }
 }
