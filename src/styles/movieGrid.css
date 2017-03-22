@@ -1,0 +1,61 @@
+.movies-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  overflow: hidden;
+  margin: 60px 5px 5px 5px;
+}
+
+.movie-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+  margin: 15px;
+  width: 240px;
+  background: #fff;
+  border: 1px solid #000;
+  border-radius: 3px;
+  padding-bottom: 0.9em;
+}
+
+.movie-image {
+  position: relative;
+  width: 100%;
+  display: block;
+  max-width: 240px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 0.8em;
+}
+
+.movie-image img {
+  display: block;
+  width: 100%;
+}
+
+.card-content {
+  margin: 0.4em 1em;
+}
+
+.card-year {
+  font-family: 'Raleway', sans-serif;
+}
+
+.card-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5em;
+}

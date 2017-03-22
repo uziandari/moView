@@ -4,7 +4,7 @@ import MoviesReducer from './movies'
 
 const rootReducer = combineReducers({
   router: routerReducer,
-  movies: MoviesReducer
+  movies: MoviesReducer,
 })
 
 export default rootReducer;

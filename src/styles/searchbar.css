@@ -1,0 +1,18 @@
+.search-container {
+  margin: 0 30%;
+}
+
+.search-input {
+  display: inline-block;
+  margin: 0;
+  text-align: center;
+  width: 40%;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  border: 1px solid #bababa;
+  padding: 0 5px;
+  height: 36px;
+  line-height: 36px;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-bottom: 25px;
+}

@@ -1,15 +1,29 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+
+//import style
+import '../styles/movieGrid.css';
 
 
 export default class MovieGrid extends Component {
+
+
   render() {
-    console.log(this.props.movies)
-    if (this.props.movies) {
+    if (this.props.movies) { //checks if api request returns undefined; search returns no results
       var moviesNode = this.props.movies.map((movie, index) => {
         return (
-          <tr key={index}>
-            <td >{movie.Title}</td>
-          </tr>
+            <div key={index} className="movie-card">
+              <div className="movie-image">
+                <div className="image-overlay">
+                </div>
+                <img src={movie.Poster} alt={movie.Title} />
+                </div>
+              <div className="card-content">
+                <div className="card-year">({movie.Year})</div>
+                <div className="card-title">{movie.Title}</div>
+                <Link to={`/view/${movie.imdbID}`}>View Details</Link>
+              </div>
+            </div>
         );
       });
     } else {
@@ -19,17 +33,12 @@ export default class MovieGrid extends Component {
     } 
 
     return (
-      <table className="table table-hover">
-        <thead>
-          <tr>
-            <th>Title</th>
-          </tr>
-        </thead>
-        <tbody>
-          {moviesNode.length === 0 ? null : moviesNode}
-        </tbody>
-      </table>
+      <div className="movies-container">
+        {moviesNode.length === 0 ? null : moviesNode}
+      </div>
     );
   }
 
 }
+
+
