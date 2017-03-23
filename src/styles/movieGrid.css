@@ -26,15 +26,15 @@
           align-items: center;
   margin: 15px;
   width: 240px;
+  height: 540px;
+  border-radius: 10px;
+  overflow: hidden;
   background: #fff;
-  border: 1px solid #000;
-  border-radius: 3px;
-  padding-bottom: 0.9em;
+  box-shadow: 1px 0 10px 0 rgba(0, 0, 0, 0.8);
 }
 
 .movie-image {
   position: relative;
-  width: 100%;
   display: block;
   max-width: 240px;
   border-top-left-radius: 4px;
@@ -45,18 +45,135 @@
 
 .movie-image img {
   display: block;
-  width: 100%;
+  height: 360px;
+  width: 240px;
 }
 
 .card-content {
-  margin: 0.4em 1em;
-}
-
-.card-year {
-  font-family: 'Raleway', sans-serif;
+  background: #fff;
+  padding: 15px 25px 40px;
 }
 
 .card-title {
+  font-size: 1.1em;
+  font-weight: 300;
+  margin-bottom: .4em;
   font-family: 'Playfair Display', serif;
-  font-size: 1.5em;
+}
+
+.movie-card a {
+  display: block;
+  width: 120px;
+  background: #3498db;
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 1px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  text-decoration: none;
+  font-size: .8em;
+  font-weight: 300;
+  font-family: "Railway", sans-serif;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.18);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  position: absolute;
+  z-index: 1;
+  transform: translate(65%, 1010%);
+}
+.movie-card a:hover {
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.18);
+}
+
+@media screen and (max-width: 720px) {
+  .results-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    overflow: hidden;
+    justify-content: center;
+    margin: 0;
+  }
+
+  .movie-card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 15px;
+    width: 320px;
+    height: 540px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 1px 0 10px 0 rgba(0, 0, 0, 0.8);
+  }
+
+  .movie-image {
+    position: relative;
+    display: block;
+    max-width: 240px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 0.8em;
+    padding: 10px;
+  }
+
+  .movie-image img {
+    display: block;
+    height: 360px;
+    width: 240px;
+  }
+
+  .card-content {
+    background: #fff;
+    padding: 25px 25px 40px;
+  }
+
+  .card-title {
+    font-size: 1.1em;
+    font-weight: 300;
+    margin-bottom: .4em;
+    font-family: 'Playfair Display', serif;
+  }
+
+  .movie-card a {
+    display: block;
+    width: 50%;
+    background: #3498db;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 10px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    text-decoration: none;
+    font-size: .8em;
+    font-weight: 300;
+    font-family: "Railway", sans-serif;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.18);
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    position: absolute;
+    z-index: 1;
+    transform: translate(0, 1010%);
+  }
+  .movie-card a:hover {
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.18);
+  }
 }

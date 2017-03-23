@@ -10,7 +10,7 @@ const API_URL = 'http://www.omdbapi.com/?';
 export function searchMovies(searchTerm = null) {
   
   return dispatch => {
-    request.get(`${API_URL}s=${searchTerm}&y=&r=json&plot=short`)
+    request.get(`${API_URL}s=${searchTerm.trimRight()}&y=&r=json&plot=short`) //trim excess whitespace
             .end((err, res) => {
               if (err || !res.ok) {
                 alert('Uh oh! Something went wrong...');
