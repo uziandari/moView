@@ -1,13 +1,14 @@
 .search-container {
   margin: auto;
-  padding-top: 1em;
+  padding-top: 3em;
+  flex: 2;
 }
 
 .search-input {
   display: block;
   margin: auto;
   text-align: center;
-  width: 40%;
+  width: 90%;
   -webkit-box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.5);
   -moz-box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.5);
   box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.5);
@@ -17,4 +18,27 @@
   line-height: 36px;
   font-size: 16px;
   margin-bottom: 25px;
+}
+
+@media screen and (min-width: 800px) {
+
+  .search-container {
+    margin: 5% 5% 5% 2%;
+  }
+
+  .search-input {
+    display: block;
+    margin: auto;
+    text-align: center;
+    width: 80%;
+    -webkit-box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.5);
+    border: 1px solid #bababa;
+    padding: 0 5px;
+    height: 36px;
+    line-height: 36px;
+    font-size: 16px;
+    margin-bottom: 25px;
+  }
 }

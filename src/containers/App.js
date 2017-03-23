@@ -4,6 +4,7 @@ import { bindActionCreators } from 'redux';
 import * as Actions from '../actions';
 
 //import search and list components
+import Header from '../components/Header';
 import SearchBar from '../components/SearchBar';
 import MovieGrid from '../components/MovieGrid';
 
@@ -11,8 +12,11 @@ import MovieGrid from '../components/MovieGrid';
 class App extends Component {
   render() {
     return (
-      <div>
-        <SearchBar searchMovies={this.props.actions.searchMovies} />
+      <div className="movie-wrapper">
+        <div className="header-wrapper">
+          <Header />
+          <SearchBar searchMovies={this.props.actions.searchMovies} />
+        </div>
         <MovieGrid movies={this.props.movies} />
       </div>
     );

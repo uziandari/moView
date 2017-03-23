@@ -13,7 +13,7 @@ export default class MovieGrid extends Component {
         return (
           <div key={index} className="movie-card">
             <div className="movie-image">
-              <img src={movie.Poster === "N/A" ? "https://placehold.it/360x240" : movie.Poster} alt={movie.Title} /> {/* Placeholder image for title that lack poster images --would likely have custom image in production */}
+              <img src={movie.Poster === "N/A" ? "https://placehold.it/240x360" : movie.Poster} alt={movie.Title} /> {/* Placeholder image for title that lack poster images --would likely have custom image in production */}
             </div>
             <div className="card-content">
               <h2 className="card-title"><strong>{movie.Title}</strong> ({movie.Year})</h2>

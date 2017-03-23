@@ -1,3 +1,4 @@
+
 .movie-detail {
   min-height: 100vh;
   display: -webkit-box;
@@ -36,8 +37,10 @@
 
 .movie-poster img {
   position: absolute;
-  top: -16%;
+  width: 140%;
+  top: -10%;
   left: -19%;
+  box-shadow: 1px 0 10px 0 rgba(0, 0, 0, 0.8);
 }
 
 .movie-content {
@@ -54,7 +57,7 @@
 }
 
 .detail-card h3 {
-  font-family: "'Raleway'", sans-serif;
+  font-family: "'Playfair Display'", sans-serif;
   font-size: 0.9em;
   margin-bottom: 0.1em;
 }
@@ -71,8 +74,12 @@
 }
 
 .list-item {
-  font-family: "Raleway", sans-serif;
+  font-family: "'Playfair Display'", serif;
   font-size: 0.8em;
+}
+
+.list-item strong {
+  font-weight: 700;
 }
 
 .movie-links {
@@ -139,7 +146,7 @@
   }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 800px) {
   .movie-detail {
     min-height: 100vh;
   }
@@ -147,7 +154,7 @@
   .detail-card {
     width: 100%;
     min-height: 80vh;
-    margin: 1%;
+    margin: 0 1%;
     border-radius: 1px;
     background: #fff;
     box-shadow: 1px 0 10px 0 rgba(0, 0, 0, 0.8);
@@ -173,7 +180,7 @@
 
   .movie-poster img {
     width: 100%;
-    margin: 5% auto;
+    margin: 0;
     position: relative;
     display: block;
     top: 0;
@@ -211,9 +218,9 @@
   }
 
   .list-item {
-    font-family: "Raleway", sans-serif;
-    font-size: 0.8em;
-  }
+  font-family: "'Playfair Display'", serif;
+  font-size: 0.8em;
+}
 
   .movie-links {
     margin-top: 2em;
