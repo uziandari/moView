@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-//example single component using setState (no redux)
+//single component using fetch, setState (no redux)
+
+//import style
+import '../styles/movieDetail.css';
 
 export default class MovieDetail extends Component {
   constructor(props) {
-    super(props);
-    
+    super(props);  
     this.state = {
       movie: null
     }
@@ -31,34 +33,32 @@ export default class MovieDetail extends Component {
     }
     
     return (
-      <div className="movie-detail">
-        <div className="row">
-          <div className="col-md-4">
-            <img src={movie.Poster} className="thumbnail" />
+      <section className="movie-detail">
+        <div className="detail-card">
+          <div className="movie-poster">
+            <img src={movie.Poster} alt={movie.Title} className="thumbnail" />
           </div>
-          <div className="col-md-8">
+          <div className="movie-content">
             <h2>{movie.Title}</h2>
+            <h3>Summary</h3>
+            <p>{movie.Plot}</p>
             <ul className="list-group">
-              <li className="list-group-item"><strong>Genre:</strong> {movie.Genre}</li>
-              <li className="list-group-item"><strong>Released:</strong> {movie.Released}</li>
-              <li className="list-group-item"><strong>Rated:</strong> {movie.Rated}</li>
-              <li className="list-group-item"><strong>IMDB Rating:</strong> {movie.imdbRating}</li>
-              <li className="list-group-item"><strong>Director:</strong> {movie.Director}</li>
-              <li className="list-group-item"><strong>Writer:</strong> {movie.Writer}</li>
-              <li className="list-group-item"><strong>Actors:</strong> {movie.Actors}</li>
+              <li className="list-item"><strong>Genre:</strong> {movie.Genre}</li>
+              <li className="list-item"><strong>Rated:</strong> {movie.Rated}</li>
+              <li className="list-item"><strong>Director:</strong> {movie.Director}</li>
+              <li className="list-item"><strong>Writer:</strong> {movie.Writer}</li>
+              <li className="list-item"><strong>Actors:</strong> {movie.Actors}</li>
+              <li className="list-item"><strong>IMDB Rating:</strong> {movie.imdbRating}</li>
+              <li className="list-item"><strong>Released:</strong> {movie.Released}</li>
             </ul>
-          </div>
-        </div>
-        <div className="row">
-          <div className="well">
-            <h3>Plot</h3>
-            {movie.Plot}
             <hr />
-            <a href="http://imdb.com/title/${movie.imdbID}" target="_blank" className="btn btn-primary">View IMDB</a>
-            <Link to={'/'} className="btn btn-default">Back To Search</Link>
+            <div className="movie-links">
+              <Link to={`http://imdb.com/title/${movie.imdbID}`} target="_blank" className="outside-link">View on IMDB</Link>
+              <Link to={'/'} className="btn btn-default">Back To Search</Link>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
     );
   }
 }
