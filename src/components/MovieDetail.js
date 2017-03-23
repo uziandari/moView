@@ -27,7 +27,7 @@ export default class MovieDetail extends Component {
   render() {
     const movie = this.state.movie;
     if (!movie) {
-      return <div>
+      return <div className="loading">
         <h2>Loading...</h2>
       </div>
     }
