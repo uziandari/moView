@@ -7,7 +7,7 @@ export default class SearchBar extends Component {
   //search function to call action
 
   componentDidMount(){
-    this.textInput.focus();
+    this.textInput.focus(); //places focus on the searchbar
   }
 
   onInputChange(searchTerm) {

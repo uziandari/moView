@@ -20,7 +20,7 @@ ReactDOM.render(
   <Provider store={store}>
     <Router>
       <div>
-        <Route exact path="/" component={App} />
+        <Route exact path="/" component={App} /> {/*react-router v4*/}
         <Route path="/view/:imdbID?" component={MovieDetail} />
       </div>
     </Router>

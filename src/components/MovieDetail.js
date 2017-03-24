@@ -12,6 +12,7 @@ export default class MovieDetail extends Component {
       movie: null
     }
     
+    //api call
     fetch(`http://omdbapi.com/?i=${this.props.match.params.imdbID}`)
     .then(response => {
       console.log("got response:", response);
@@ -26,7 +27,7 @@ export default class MovieDetail extends Component {
 
   render() {
     const movie = this.state.movie;
-    if (!movie) {
+    if (!movie) { //loaded until response
       return <div className="loading">
         <h2>Loading...</h2>
       </div>
@@ -37,7 +38,7 @@ export default class MovieDetail extends Component {
         <div className="movie-detail">
           <div className="detail-card">
             <div className="movie-poster">
-                <img src={movie.Poster === "N/A" ? "https://placehold.it/360x240" : movie.Poster} alt={movie.Title} /> {/* Placeholder image for title that lack poster images --would likely have custom image in production */}
+                <img src={movie.Poster === "N/A" ? "https://placehold.it/240x360" : movie.Poster} alt={movie.Title} /> {/* Placeholder image for title that lack poster images --would likely have custom image in production */}
             </div>
             <div className="movie-content">
               <h2>{movie.Title}</h2>
